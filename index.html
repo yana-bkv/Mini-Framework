@@ -4,18 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo</title>
+    <style>
+        body {
+            background-color: rgb(119, 118, 118);
+            color: white;
+        }
+        .main {
+            padding: 20px;
+            padding-left: 20%;
+        }
+        .create form {
+            display: flex;
+        }
+        textarea {
+            padding: 10px
+        }
+        
+        .checkbox {
+            align-items: right;
+        }
+        li {
+            list-style-type: decimal;
+        }
+        button {
+            margin-left: 10px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Todo MVC</h1>
+    <div class="main">
+        <h1>Todo MVC</h1>
 
-    <div class="create">
-        <form>
-            <input type="text" placeholder="blah blah blah">
-            <button type="submit">Add todo</button>
-        </form>
+        <div class="create">
+            <form>
+                <textarea id="myTextarea" rows="5" cols="30">Todo...</textarea>
+                <button type="submit" id="createTodo">Add todo</button>
+            </form>
+        </div>
+        
+        <ul id="todoList"></ul>
     </div>
-    
-    <div class="list"></div>
     <script src="./index.js"></script>
 </body>
 </html>
